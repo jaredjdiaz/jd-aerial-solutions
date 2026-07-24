@@ -8,12 +8,21 @@
 @media(max-width:850px){.site-header nav{gap:14px}.service-grid{grid-template-columns:repeat(3,1fr)}.credentials{grid-template-columns:repeat(2,1fr)}.drone-art{opacity:.22}.reasons{grid-template-columns:repeat(3,1fr)}} @media(max-width:600px){.site-header{height:68px}.site-header nav,.quote-button{display:none}.hero{min-height:500px;padding-top:80px}.hero-copy>p:first-child{font-size:16px}.hero h2{font-size:15px}.hero-lines span{font-size:11px;padding:4px 9px}.credentials{grid-template-columns:1fr 1fr;padding:20px}.credentials div{justify-content:flex-start}.service-grid,.work-grid{grid-template-columns:1fr 1fr}.about-band,.contact-section{grid-template-columns:1fr;display:grid;gap:25px}.reasons{grid-template-columns:repeat(3,1fr)}footer{flex-direction:column;gap:10px;text-align:center}.content-section{padding-top:50px;padding-bottom:50px}}
 
 /* Brand typography and supplied logo */
-body { font-family:"DM Sans",Arial,Helvetica,sans-serif; }
-h1,h2,h3,.hero-copy>p:first-child { font-family:"Barlow Condensed","Arial Narrow",Arial,sans-serif; }
-.logo { width:115px; height:70px; display:flex; align-items:center; overflow:hidden; }
+body { font-family:"Raleway",Arial,Helvetica,sans-serif; }
+h1,h2,h3,.hero-copy>p:first-child { font-family:"Montserrat",Arial,Helvetica,sans-serif; }
+.site-header { height:100px; }
+.logo { width:170px; height:82px; display:flex; align-items:center; overflow:hidden; }
 .logo img { height:100%; width:100%; object-fit:contain; mix-blend-mode:multiply; }
 .logo strong,.logo span { display:none; }
-.hero h1 { font-size:clamp(54px,5.6vw,84px); font-weight:800; line-height:.86; letter-spacing:.005em; }
-.hero h2 { font-size:22px; font-weight:600; letter-spacing:.055em; }
-.section-heading h2,.service-grid h3,.about-band h2,.contact-section h2 { font-weight:700; letter-spacing:.025em; }
-.footer-logo { width:96px; height:58px; background:#fff; padding:3px 7px; }
+.hero h1 { font-size:clamp(3.5rem,5.65vw,5.35rem); font-weight:800; line-height:.94; letter-spacing:-.045em; }
+.hero h2 { font-size:clamp(1rem,1.55vw,1.38rem); font-weight:700; letter-spacing:.04em; }
+.section-heading h2 { font-size:clamp(2.1rem,3vw,3.3rem); font-weight:800; letter-spacing:-.04em; }
+.service-grid h3 { font-size:15px; font-weight:800; letter-spacing:-.01em; }
+.service-grid p { font-size:12px; line-height:1.55; }
+.about-band h2,.contact-section h2 { font-weight:800; letter-spacing:-.04em; }
+.about-band h2 { font-size:clamp(2rem,3.2vw,3.25rem); line-height:1.08; }
+.contact-section h2 { font-size:clamp(2rem,3vw,3rem); }
+.hero-detail,.contact-section p:not(.gold-kicker) { font-size:15px; line-height:1.6; }
+.footer-logo { width:150px; height:72px; background:transparent; padding:0; }
+.footer-logo img { filter:brightness(0) invert(1); mix-blend-mode:normal; }
+@media(max-width:600px) { .site-header { height:80px; } .logo { width:136px; height:68px; } .hero h1 { font-size:clamp(2.9rem,13vw,3.75rem); } .footer-logo { width:145px; } }
