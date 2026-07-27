@@ -7,7 +7,7 @@ type ServiceIconName = "construction" | "roof" | "mapping" | "model" | "site" | 
 
 const services: { icon: ServiceIconName; title: string; description: string; href?: string }[] = [
   { icon: "construction", title: "Construction Progress", description: "Track progress, keep projects on schedule, and document every phase from start to finish.", href: "/construction-progress" },
-  { icon: "roof", title: "Roof Documentation", description: "High-resolution aerial roof imagery and documentation for contractors, insurance professionals, and property owners.", href: "/roof-documentation" },
+  { icon: "roof", title: "Roof Documentation", description: "Aerial visual documentation for roofs, building exteriors, towers, and hard-to-reach structures.", href: "/roof-documentation" },
   { icon: "model", title: "3D Models", description: "Visual 3D models of buildings, structures, and sites created from aerial imagery.", href: "/3d-models" },
   { icon: "site", title: "Site Overview Imagery", description: "High-resolution aerial overviews that help teams, clients, and stakeholders see the full site clearly.", href: "/site-overview-imagery" },
   { icon: "commercial", title: "Commercial Properties", description: "Marketing imagery, site overviews, and asset documentation that helps your business stand out.", href: "/commercial-properties" },
