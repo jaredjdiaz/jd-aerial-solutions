@@ -1,6 +1,7 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import Link from "next/link";
 
 const services = [
   "Construction Progress",
@@ -46,6 +47,7 @@ export default function QuoteForm() {
       <label className="quote-form-trap" aria-hidden="true">Website<input name="website" tabIndex={-1} autoComplete="off" /></label>
     </div>
     <button className="quote-form-submit" type="submit" disabled={status === "sending"}>{status === "sending" ? "Sending…" : "Request a Quote"}<span aria-hidden="true">→</span></button>
+    <p className="quote-form-privacy">By submitting, you agree to our <Link href="/privacy">Privacy Policy</Link>.</p>
     <p className={`quote-form-status${status === "error" ? " is-error" : ""}`} aria-live="polite">{message}</p>
   </form>;
 }

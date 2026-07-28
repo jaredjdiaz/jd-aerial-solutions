@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Roof, Building & Tower Documentation | JD Aerial Solutions",
@@ -41,6 +42,6 @@ export default function RoofDocumentationPage() {
     <section className="service-page-section service-process"><header><p className="section-label">How it works</p><h2>Simple from quote to delivery.</h2></header><div><article><span>01</span><h3>Tell us about the property</h3><p>Share the address, the type of imagery you need, and any project context that will help us plan the flight.</p></article><article><span>02</span><h3>Plan the coverage</h3><p>We coordinate the timing, property access, and relevant site considerations before the scheduled flight.</p></article><article><span>03</span><h3>Receive your imagery</h3><p>Get a clean, organized set of aerial visuals ready to review and share with your team.</p></article></div></section>
     <section className="service-page-section service-faq"><p className="section-label">Common questions</p><details open><summary>What can aerial documentation be used for?</summary><p>It is useful for visual records, project planning, contractor communication, property documentation, and providing a clearer view of a roof, exterior, tower, or site.</p></details><details><summary>Can you document building exteriors and towers?</summary><p>Yes. Aerial imagery can provide useful visual coverage of building exteriors, elevated structures, and towers when site conditions and airspace allow.</p></details><details><summary>Is this a roof, building, or tower inspection?</summary><p>No. JD Aerial Solutions provides aerial photography and visual documentation, not licensed structural inspections, engineering opinions, or determinations of property condition.</p></details><details><summary>Do you need access to the roof or structure?</summary><p>Typically, no roof or structure access is needed for aerial photography. We will coordinate any needed property access and site requirements before the flight.</p></details></section>
     <section className="service-page-cta"><p>Ready for a better view of your property?</p><h2>Let&apos;s capture the visuals that help move the project forward.</h2><Link href="/#contact" className="blue-button quote-hero"><span>Get a Free Quote</span><i aria-hidden="true">&rarr;</i></Link></section>
-    <footer><Link className="logo footer-logo" href="/"><Image src="/images/jd-aerial-logo-lockup.png" alt="JD Aerial Solutions" width={1824} height={862} /></Link><span>&copy; {new Date().getFullYear()} JD Aerial Solutions, LLC. All rights reserved.</span></footer>
+    <Footer />
   </main>;
 }

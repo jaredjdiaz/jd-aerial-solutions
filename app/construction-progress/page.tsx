@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Construction Progress Photography | JD Aerial Solutions",
@@ -40,6 +41,6 @@ export default function ConstructionProgressPage() {
     <section className="service-page-section service-process"><header><p className="section-label">How it works</p><h2>Simple from quote to delivery.</h2></header><div><article><span>01</span><h3>Share the project</h3><p>Tell us where the site is, what you need to show, and when the coverage is most useful.</p></article><article><span>02</span><h3>Coordinate the flight</h3><p>We work around site activity and access requirements to plan a safe, efficient capture.</p></article><article><span>03</span><h3>Receive your imagery</h3><p>Get an organized set of aerial visuals that your team can review and share.</p></article></div></section>
     <section className="service-page-section service-faq"><p className="section-label">Common questions</p><details open><summary>How often should a project be documented?</summary><p>That depends on your project. Some teams need a one-time overview, while others schedule coverage around key milestones.</p></details><details><summary>Can you work around an active construction site?</summary><p>Yes. We coordinate with the site team on access, timing, and any relevant safety considerations before the flight.</p></details><details><summary>Is this a substitute for a licensed survey?</summary><p>No. Construction progress photography is visual documentation and is not presented as a licensed surveying or engineering service.</p></details></section>
     <section className="service-page-cta"><p>Ready for a better view of your project?</p><h2>Let&apos;s document the work as it takes shape.</h2><Link href="/#contact" className="blue-button quote-hero"><span>Get a Free Quote</span><i aria-hidden="true">→</i></Link></section>
-    <footer><Link className="logo footer-logo" href="/"><Image src="/images/jd-aerial-logo-lockup.png" alt="JD Aerial Solutions" width={1824} height={862} /></Link><span>© {new Date().getFullYear()} JD Aerial Solutions, LLC. All rights reserved.</span></footer>
+    <Footer />
   </main>;
 }

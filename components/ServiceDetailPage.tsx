@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export type ServicePageContent = {
   kicker: string;
@@ -34,6 +35,6 @@ export default function ServiceDetailPage({ content }: { content: ServicePageCon
     <section className="service-page-section service-process"><header><p className="section-label">{content.process.label}</p><h2>{content.process.heading}</h2></header><div>{content.process.items.map((item) => <article key={item.number}><span>{item.number}</span><h3>{item.title}</h3><p>{item.copy}</p></article>)}</div></section>
     <section className="service-page-section service-faq"><p className="section-label">Common questions</p>{content.faqs.map((faq, index) => <details key={faq.question} open={index === 0}><summary>{faq.question}</summary><p>{faq.answer}</p></details>)}</section>
     <section className="service-page-cta"><p>{content.cta.kicker}</p><h2>{content.cta.heading}</h2><Link href="/#contact" className="blue-button quote-hero"><span>Get a Free Quote</span><i aria-hidden="true">&rarr;</i></Link></section>
-    <footer><Link className="logo footer-logo" href="/"><Image src="/images/jd-aerial-logo-lockup.png" alt="JD Aerial Solutions" width={1824} height={862} /></Link><span>&copy; {new Date().getFullYear()} JD Aerial Solutions, LLC. All rights reserved.</span></footer>
+    <Footer />
   </main>;
 }

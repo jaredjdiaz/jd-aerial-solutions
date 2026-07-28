@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import QuoteForm from "@/components/QuoteForm";
+import Footer from "@/components/Footer";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -68,6 +69,6 @@ export default function Home() {
     <section id="portfolio" className="portfolio content-section"><header className="section-heading"><p>Selected flights</p><h2>Recent Work</h2></header><div className="work-grid">{work.map((title, index) => <article className={`work-card work-${index + 1}`} key={title}><span>JD Aerial</span><div><b>{title}</b><small>Image placeholder</small></div></article>)}</div><a className="portfolio-button" href="#contact">View Full Portfolio</a></section>
     <section id="about" className="about-band"><div><p>Why work with JD Aerial Solutions?</p><h2>Precision from above.<br />Results you can build on.</h2></div><div className="reasons"><span><i className="reason-icon"><ReasonIcon icon="local" /></i><b>Local &amp;<br />Reliable</b></span><span><i className="reason-icon"><ReasonIcon icon="fast" /></i><b>Fast<br />Turnaround</b></span><span><i className="reason-icon"><ReasonIcon icon="accurate" /></i><b>Clear Aerial<br />Visuals</b></span><span><i className="reason-icon"><ReasonIcon icon="reports" /></i><b>Clear<br />Deliverables</b></span><span><i className="reason-icon"><ReasonIcon icon="safe" /></i><b>Safety<br />Focused</b></span></div></section>
     <section id="contact" className="contact-section"><div className="contact-copy"><p className="gold-kicker">Let’s work together</p><h2>Have a project in mind?</h2><p>Tell us what you need to see from above. We&apos;ll follow up with a straightforward plan and quote.</p><a className="contact-email" href="mailto:info@jdaerialsolutions.com">info@jdaerialsolutions.com</a><span>Albuquerque, New Mexico</span></div><QuoteForm /></section>
-    <footer><a className="logo footer-logo" href="#home"><Image src="/images/jd-aerial-logo-lockup.png" alt="JD Aerial Solutions" width={1824} height={862} /></a><span>© {new Date().getFullYear()} JD Aerial Solutions, LLC. All rights reserved.</span></footer>
+    <Footer />
   </main>;
 }
