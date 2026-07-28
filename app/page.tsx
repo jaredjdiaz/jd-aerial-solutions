@@ -2,7 +2,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import QuoteForm from "@/components/QuoteForm";
 import Footer from "@/components/Footer";
-import Image from "next/image";
+import PortfolioImageCard from "@/components/PortfolioImageCard";
 import Link from "next/link";
 
 type ServiceIconName = "construction" | "roof" | "mapping" | "model" | "site" | "commercial" | "land";
@@ -12,10 +12,10 @@ const services: { icon: ServiceIconName; title: string; description: string; hre
   { icon: "roof", title: "Roof Documentation", description: "Aerial visual documentation for roofs, building exteriors, towers, and hard-to-reach structures.", href: "/roof-documentation" },
   { icon: "model", title: "3D Models", description: "Visual 3D models of buildings, structures, and sites created from aerial imagery.", href: "/3d-models" },
   { icon: "site", title: "Site Overview Imagery", description: "High-resolution aerial overviews that help teams, clients, and stakeholders see the full site clearly.", href: "/site-overview-imagery" },
-  { icon: "commercial", title: "Commercial Properties", description: "Marketing imagery, site overviews, and asset documentation that helps your business stand out.", href: "/commercial-properties" },
+  { icon: "commercial", title: "Commercial Properties", description: "Aerial photo and video for property marketing, site overviews, and asset documentation.", href: "/commercial-properties" },
   { icon: "land", title: "Vacant Land & Development", description: "Aerial imagery and site-overview visuals for land marketing, planning conversations, and development context.", href: "/vacant-land-development" },
 ];
-const work = ["Construction Progress", "Roof Documentation", "Site Overview", "3D Model"];
+const work = [{ title: "Mountain Cabin", detail: "Personal aerial study · Colorado Springs, CO", category: "Property marketing", image: "/images/colorado-springs-cabin.png" }];
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
@@ -24,7 +24,7 @@ const structuredData = {
   email: "info@jdaerialsolutions.com",
   description: "Professional drone photography, aerial visual documentation, construction progress imagery, and property visuals in Albuquerque, New Mexico.",
   areaServed: { "@type": "City", name: "Albuquerque", address: { "@type": "PostalAddress", addressRegion: "NM", addressCountry: "US" } },
-  serviceType: ["Construction progress photography", "Roof and exterior visual documentation", "Aerial site overview imagery", "Commercial property aerial photography", "Aerial 3D models"],
+  serviceType: ["Construction progress photography", "Roof and exterior visual documentation", "Aerial site overview imagery", "Commercial property aerial photo and video", "Aerial 3D models"],
 };
 
 function ServiceIcon({ icon }: { icon: ServiceIconName }) {
@@ -66,7 +66,7 @@ export default function Home() {
     <Hero />
     <section className="credentials" data-reveal><div><span className="credential-icon"><CredentialIcon icon="certified" /></span><span>FAA Part 107<br />Certified</span></div><div><span className="credential-icon"><CredentialIcon icon="local" /></span><span>Albuquerque,<br />New Mexico</span></div><div><span className="credential-icon"><CredentialIcon icon="safety" /></span><span>Safety<br />Focused</span></div><div><span className="credential-icon"><CredentialIcon icon="deliverables" /></span><span>Clear Project<br />Deliverables</span></div></section>
     <section id="services" className="content-section"><header className="section-heading" data-reveal><p>What we do</p><h2>Our Services</h2></header><div className="service-grid">{services.map(({ icon, title, description, href }) => <article key={title} data-reveal><span className="service-icon"><ServiceIcon icon={icon} /></span><h3>{title}</h3><p>{description}</p><Link className="service-card-link" href={href ?? "#contact"}>{href ? "Learn more" : "Ask about this"}<span aria-hidden="true">→</span></Link></article>)}</div><aside className="capability-note" data-reveal><span className="capability-icon"><ServiceIcon icon="mapping" /></span><div><p>Expanding capability</p><h3>Aerial Mapping</h3><span>Accurate mapping requires a specialized capture and accuracy workflow. Contact us to discuss your project and current availability.</span></div><a href="#contact">Ask About Mapping</a></aside></section>
-    <section id="portfolio" className="portfolio content-section"><header className="section-heading"><p>Selected flights</p><h2>Recent Work</h2></header><div className="work-grid">{work.map((title, index) => <article className={`work-card work-${index + 1}`} key={title}><span>JD Aerial</span><div><b>{title}</b><small>Image placeholder</small></div></article>)}</div><a className="portfolio-button" href="#contact">View Full Portfolio</a></section>
+    <section id="portfolio" className="portfolio content-section"><header className="section-heading"><p>Selected flights</p><h2>Recent Work</h2></header><div className="work-grid">{work.map((item) => <PortfolioImageCard key={item.title} {...item} alt="Aerial view of a mountain cabin near Colorado Springs" />)}</div><a className="portfolio-button" href="#contact">Ask About Your Project</a></section>
     <section id="about" className="about-band"><div><p>Why work with JD Aerial Solutions?</p><h2>Precision from above.<br />Results you can build on.</h2></div><div className="reasons"><span><i className="reason-icon"><ReasonIcon icon="local" /></i><b>Local &amp;<br />Reliable</b></span><span><i className="reason-icon"><ReasonIcon icon="fast" /></i><b>Fast<br />Turnaround</b></span><span><i className="reason-icon"><ReasonIcon icon="accurate" /></i><b>Clear Aerial<br />Visuals</b></span><span><i className="reason-icon"><ReasonIcon icon="reports" /></i><b>Clear<br />Deliverables</b></span><span><i className="reason-icon"><ReasonIcon icon="safe" /></i><b>Safety<br />Focused</b></span></div></section>
     <section id="contact" className="contact-section"><div className="contact-copy"><p className="gold-kicker">Let’s work together</p><h2>Have a project in mind?</h2><p>Tell us what you need to see from above. We&apos;ll follow up with a straightforward plan and quote.</p><a className="contact-email" href="mailto:info@jdaerialsolutions.com">info@jdaerialsolutions.com</a><span>Albuquerque, New Mexico</span></div><QuoteForm /></section>
     <Footer />
