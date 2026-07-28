@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import QuoteForm from "@/components/QuoteForm";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -41,7 +42,7 @@ type ReasonIconName = "local" | "fast" | "accurate" | "reports" | "safe";
 function ReasonIcon({ icon }: { icon: ReasonIconName }) {
   const shared = { viewBox: "0 0 48 48", fill: "none", stroke: "currentColor", strokeWidth: 1.8, strokeLinecap: "round" as const, strokeLinejoin: "round" as const, "aria-hidden": true };
   if (icon === "local") return <svg {...shared}><path d="M24 43s13-12.4 13-23a13 13 0 1 0-26 0c0 10.6 13 23 13 23Z" /><circle cx="24" cy="20" r="4" /></svg>;
-  if (icon === "fast") return <svg {...shared}><circle cx="24" cy="25" r="16" /><path d="M24 15v10l7 4" /><path d="m27 4-5 7h5l-5 7" /></svg>;
+  if (icon === "fast") return <svg {...shared}><circle cx="27" cy="24" r="14" /><path d="M27 16v8l5 3" /><path d="M5 17h9M5 24h6M5 31h9" /></svg>;
   if (icon === "accurate") return <svg {...shared}><circle cx="24" cy="24" r="13" /><circle cx="24" cy="24" r="4" /><path d="M24 5v6m0 26v6M5 24h6m26 0h6" /></svg>;
   if (icon === "reports") return <svg {...shared}><path d="M13 5h18l6 6v32H13Z" /><path d="M31 5v8h8M19 20h12m-12 6h12m-12 6h7" /><path d="m19 36 3 3 6-7" /></svg>;
   return <svg {...shared}><path d="M24 5 39 11v11c0 10-6.4 16.8-15 21-8.6-4.2-15-11-15-21V11Z" /><path d="m17 24 5 5 10-11" /></svg>;
@@ -55,7 +56,7 @@ export default function Home() {
     <section id="services" className="content-section"><header className="section-heading" data-reveal><p>What we do</p><h2>Our Services</h2></header><div className="service-grid">{services.map(({ icon, title, description, href }) => <article key={title} data-reveal><span className="service-icon"><ServiceIcon icon={icon} /></span><h3>{title}</h3><p>{description}</p><Link className="service-card-link" href={href ?? "#contact"}>{href ? "Learn more" : "Ask about this"}<span aria-hidden="true">→</span></Link></article>)}</div><aside className="capability-note" data-reveal><span className="capability-icon"><ServiceIcon icon="mapping" /></span><div><p>Expanding capability</p><h3>Aerial Mapping</h3><span>Accurate mapping requires a specialized capture and accuracy workflow. Contact us to discuss your project and current availability.</span></div><a href="#contact">Ask About Mapping</a></aside></section>
     <section id="portfolio" className="portfolio content-section"><header className="section-heading"><p>Selected flights</p><h2>Recent Work</h2></header><div className="work-grid">{work.map((title, index) => <article className={`work-card work-${index + 1}`} key={title}><span>JD Aerial</span><div><b>{title}</b><small>Image placeholder</small></div></article>)}</div><a className="portfolio-button" href="#contact">View Full Portfolio</a></section>
     <section id="about" className="about-band"><div><p>Why work with JD Aerial Solutions?</p><h2>Precision from above.<br />Results you can build on.</h2></div><div className="reasons"><span><i className="reason-icon"><ReasonIcon icon="local" /></i><b>Local &amp;<br />Reliable</b></span><span><i className="reason-icon"><ReasonIcon icon="fast" /></i><b>Fast<br />Turnaround</b></span><span><i className="reason-icon"><ReasonIcon icon="accurate" /></i><b>Clear Aerial<br />Visuals</b></span><span><i className="reason-icon"><ReasonIcon icon="reports" /></i><b>Clear<br />Deliverables</b></span><span><i className="reason-icon"><ReasonIcon icon="safe" /></i><b>Safety<br />Focused</b></span></div></section>
-    <section id="contact" className="contact-section"><div><p className="gold-kicker">Let’s work together</p><h2>Have a project in mind?</h2><p>Let&apos;s talk about how we can help you see it from a better angle.</p></div><div className="contact-details"><a href="tel:+15051234567">(505) 123-4567</a><a href="mailto:info@jdaerialsolutions.com">info@jdaerialsolutions.com</a><span>Albuquerque, New Mexico</span><a className="blue-button quote-contact" href="mailto:info@jdaerialsolutions.com"><span>Get a Free Quote</span><i aria-hidden="true">→</i></a></div></section>
+    <section id="contact" className="contact-section"><div className="contact-copy"><p className="gold-kicker">Let’s work together</p><h2>Have a project in mind?</h2><p>Tell us what you need to see from above. We&apos;ll follow up with a straightforward plan and quote.</p><a className="contact-email" href="mailto:info@jdaerialsolutions.com">info@jdaerialsolutions.com</a><span>Albuquerque, New Mexico</span></div><QuoteForm /></section>
     <footer><a className="logo footer-logo" href="#home"><Image src="/images/jd-aerial-logo-lockup.png" alt="JD Aerial Solutions" width={1824} height={862} /></a><span>© {new Date().getFullYear()} JD Aerial Solutions, LLC. All rights reserved.</span></footer>
   </main>;
 }
