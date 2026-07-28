@@ -15,6 +15,16 @@ const services: { icon: ServiceIconName; title: string; description: string; hre
   { icon: "land", title: "Vacant Land & Development", description: "Aerial imagery and site-overview visuals for land marketing, planning conversations, and development context.", href: "/vacant-land-development" },
 ];
 const work = ["Construction Progress", "Roof Documentation", "Site Overview", "3D Model"];
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  name: "JD Aerial Solutions",
+  url: "https://jdaerialsolutions.com",
+  email: "info@jdaerialsolutions.com",
+  description: "Professional drone photography, aerial visual documentation, construction progress imagery, and property visuals in Albuquerque, New Mexico.",
+  areaServed: { "@type": "City", name: "Albuquerque", address: { "@type": "PostalAddress", addressRegion: "NM", addressCountry: "US" } },
+  serviceType: ["Construction progress photography", "Roof and exterior visual documentation", "Aerial site overview imagery", "Commercial property aerial photography", "Aerial 3D models"],
+};
 
 function ServiceIcon({ icon }: { icon: ServiceIconName }) {
   const shared = { viewBox: "0 0 48 48", fill: "none", stroke: "currentColor", strokeWidth: 1.8, strokeLinecap: "round" as const, strokeLinejoin: "round" as const, "aria-hidden": true };
@@ -50,6 +60,7 @@ function ReasonIcon({ icon }: { icon: ReasonIconName }) {
 
 export default function Home() {
   return <main>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
     <Navbar />
     <Hero />
     <section className="credentials" data-reveal><div><span className="credential-icon"><CredentialIcon icon="certified" /></span><span>FAA Part 107<br />Certified</span></div><div><span className="credential-icon"><CredentialIcon icon="local" /></span><span>Albuquerque,<br />New Mexico</span></div><div><span className="credential-icon"><CredentialIcon icon="safety" /></span><span>Safety<br />Focused</span></div><div><span className="credential-icon"><CredentialIcon icon="deliverables" /></span><span>Clear Project<br />Deliverables</span></div></section>

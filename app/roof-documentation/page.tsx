@@ -27,10 +27,8 @@ export default function RoofDocumentationPage() {
     <Navbar />
     <section className="service-page-hero">
       <div className="service-page-hero-copy">
-        <p className="service-kicker">Roof documentation photography</p>
-        <h1>A clearer view <em>from above.</em></h1>
-        <p>Clear aerial imagery gives property owners and project teams a practical way to document roofs, building exteriors, towers, and other hard-to-reach structures from a better perspective.</p>
-        <div className="service-page-actions"><Link href="/#contact" className="blue-button quote-hero"><span>Get a Free Quote</span><i aria-hidden="true">&rarr;</i></Link><Link href="/#services" className="outline-button">All Services</Link></div>
+        <div className="service-page-hero-heading"><p className="service-kicker">Roof documentation photography</p><h1>A clearer view <em>from above.</em></h1></div>
+        <div className="service-page-hero-details"><p>Clear aerial imagery gives property owners and project teams a practical way to document roofs, building exteriors, towers, and other hard-to-reach structures from a better perspective.</p><div className="service-page-actions"><Link href="/#contact" className="blue-button quote-hero"><span>Get a Free Quote</span><i aria-hidden="true">&rarr;</i></Link><Link href="/#services" className="outline-button">All Services</Link></div></div>
       </div>
       <div className="service-page-image"><Image src="/images/jd-aerial-hero.png" alt="Aerial view of a property and surrounding site" fill priority sizes="(max-width: 850px) 100vw, 50vw" /></div>
     </section>

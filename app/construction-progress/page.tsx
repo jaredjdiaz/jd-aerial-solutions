@@ -26,10 +26,8 @@ export default function ConstructionProgressPage() {
     <Navbar />
     <section className="service-page-hero">
       <div className="service-page-hero-copy">
-        <p className="service-kicker">Construction progress photography</p>
-        <h1>Keep every phase <em>in view.</em></h1>
-        <p>Clear aerial imagery helps construction teams document progress, share site context, and keep the right people up to date.</p>
-        <div className="service-page-actions"><Link href="/#contact" className="blue-button quote-hero"><span>Get a Free Quote</span><i aria-hidden="true">→</i></Link><Link href="/#services" className="outline-button">All Services</Link></div>
+        <div className="service-page-hero-heading"><p className="service-kicker">Construction progress photography</p><h1>Keep every phase <em>in view.</em></h1></div>
+        <div className="service-page-hero-details"><p>Clear aerial imagery helps construction teams document progress, share site context, and keep the right people up to date.</p><div className="service-page-actions"><Link href="/#contact" className="blue-button quote-hero"><span>Get a Free Quote</span><i aria-hidden="true">→</i></Link><Link href="/#services" className="outline-button">All Services</Link></div></div>
       </div>
       <div className="service-page-image"><Image src="/images/jd-aerial-hero.png" alt="Aerial view of an active construction development site" fill priority sizes="(max-width: 850px) 100vw, 50vw" /></div>
     </section>

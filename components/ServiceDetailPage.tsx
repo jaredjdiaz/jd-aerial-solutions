@@ -20,10 +20,8 @@ export default function ServiceDetailPage({ content }: { content: ServicePageCon
     <Navbar />
     <section className="service-page-hero">
       <div className="service-page-hero-copy">
-        <p className="service-kicker">{content.kicker}</p>
-        <h1>{content.title.before} <em>{content.title.emphasis}</em></h1>
-        <p>{content.description}</p>
-        <div className="service-page-actions"><Link href="/#contact" className="blue-button quote-hero"><span>Get a Free Quote</span><i aria-hidden="true">&rarr;</i></Link><Link href="/#services" className="outline-button">All Services</Link></div>
+        <div className="service-page-hero-heading"><p className="service-kicker">{content.kicker}</p><h1>{content.title.before} <em>{content.title.emphasis}</em></h1></div>
+        <div className="service-page-hero-details"><p>{content.description}</p><div className="service-page-actions"><Link href="/#contact" className="blue-button quote-hero"><span>Get a Free Quote</span><i aria-hidden="true">&rarr;</i></Link><Link href="/#services" className="outline-button">All Services</Link></div></div>
       </div>
       <div className="service-page-image"><Image src="/images/jd-aerial-hero.png" alt={content.imageAlt} fill priority sizes="(max-width: 850px) 100vw, 50vw" /></div>
     </section>
