@@ -8,14 +8,14 @@ const desktopLinks = [
   ["Home", "/"],
   ["Services", "/#services"],
   ["Portfolio", "/#portfolio"],
-  ["About", "/#about"],
+  ["About", "/about"],
   ["Contact", "/#contact"],
 ];
 
 const mobileLinks = [
   ["Home", "/"],
   ["Portfolio", "/#portfolio"],
-  ["About", "/#about"],
+  ["About", "/about"],
   ["Contact", "/#contact"],
 ];
 

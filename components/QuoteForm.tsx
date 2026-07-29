@@ -31,19 +31,19 @@ export default function QuoteForm() {
     }
     form.reset();
     setStatus("success");
-    setMessage("Thanks—your request is in. We’ll be in touch before takeoff.");
+    setMessage("Thanks, your request is in. We’ll be in touch before takeoff.");
   }
 
   return <form className="quote-form" onSubmit={submitForm}>
-    <div className="quote-form-heading"><p>Get a free quote</p><span>Tell us a little about the project.</span></div>
+    <div className="quote-form-heading"><p>Get a free quote</p><span>Fields marked <b aria-hidden="true">*</b> are required.</span></div>
     <div className="quote-form-grid">
-      <label>Name<input name="name" autoComplete="name" required /></label>
-      <label>Company <small>(optional)</small><input name="company" autoComplete="organization" /></label>
-      <label>Email<input name="email" type="email" autoComplete="email" required /></label>
-      <label>Phone <small>(optional)</small><input name="phone" type="tel" autoComplete="tel" /></label>
-      <label>Service needed<select name="service" defaultValue="" required><option value="" disabled>Select a service</option>{services.map((service) => <option key={service}>{service}</option>)}</select></label>
-      <label>Project location<input name="location" autoComplete="street-address" placeholder="City or property address" required /></label>
-      <label className="quote-form-message">Project details<textarea name="details" rows={4} placeholder="What do you need documented, and when?" required /></label>
+      <label><span className="quote-form-label">Name <b aria-hidden="true">*</b></span><input name="name" autoComplete="name" required /></label>
+      <label><span className="quote-form-label">Company</span><input name="company" autoComplete="organization" placeholder="Optional" /></label>
+      <label><span className="quote-form-label">Email <b aria-hidden="true">*</b></span><input name="email" type="email" autoComplete="email" required /></label>
+      <label><span className="quote-form-label">Phone</span><input name="phone" type="tel" autoComplete="tel" placeholder="Optional" /></label>
+      <label><span className="quote-form-label">Service needed <b aria-hidden="true">*</b></span><select name="service" defaultValue="" required><option value="" disabled>Select a service</option>{services.map((service) => <option key={service}>{service}</option>)}</select></label>
+      <label><span className="quote-form-label">Project location <b aria-hidden="true">*</b></span><input name="location" autoComplete="street-address" placeholder="City or property address" required /></label>
+      <label className="quote-form-message"><span className="quote-form-label">Project details <b aria-hidden="true">*</b></span><textarea name="details" rows={4} placeholder="What do you need documented, and when?" required /></label>
       <label className="quote-form-trap" aria-hidden="true">Website<input name="website" tabIndex={-1} autoComplete="off" /></label>
     </div>
     <button className="quote-form-submit" type="submit" disabled={status === "sending"}>{status === "sending" ? "Sending…" : "Request a Quote"}<span aria-hidden="true">→</span></button>

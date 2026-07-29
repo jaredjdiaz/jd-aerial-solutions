@@ -10,7 +10,7 @@ const content: ServicePageContent = {
   kicker: "Aerial 3D model visualization",
   title: { before: "See the project", emphasis: "in 3D." },
   description: "Aerial imagery can be turned into a visual 3D model that gives your team a more complete way to explore a building, structure, or site.",
-  imageAlt: "Aerial view of a site prepared for 3D model visualization",
+  imageAlt: "Aerial view of a construction development at sunset with mountains in the distance",
   intro: { label: "Why 3D models", title: "A more complete visual of the project.", copy: "A 3D model brings aerial coverage together into a single visual experience, making it easier to understand the overall form and context of a structure or site." },
   benefits: {
     label: "Built for a better perspective",

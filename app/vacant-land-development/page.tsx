@@ -10,7 +10,7 @@ const content: ServicePageContent = {
   kicker: "Vacant land & development imagery",
   title: { before: "Bring the land", emphasis: "into view." },
   description: "Aerial imagery makes it easier to show a property's scale, access, landscape, and surrounding context from a clear, high-level perspective.",
-  imageAlt: "Aerial view of vacant land and the surrounding landscape",
+  imageAlt: "Aerial view of a construction development at sunset with mountains in the distance",
   intro: { label: "Why vacant land imagery", title: "Help people understand the property before they arrive.", copy: "Clear aerial visuals can make land marketing, early project conversations, and property presentations more concrete by showing the site in its wider setting." },
   benefits: {
     label: "A clearer view of the land",

@@ -10,7 +10,7 @@ const content: ServicePageContent = {
   kicker: "Aerial site overview imagery",
   title: { before: "Show the whole", emphasis: "site." },
   description: "High-resolution aerial imagery makes it easier to show a property's layout, scale, access, and surrounding context at a glance.",
-  imageAlt: "Aerial view of a property and surrounding landscape",
+  imageAlt: "Aerial view of a construction development at sunset with mountains in the distance",
   intro: { label: "Why site overview imagery", title: "The whole picture, from above.", copy: "One well-planned aerial shoot can give clients, owners, and stakeholders a clear visual reference for a property or project without relying only on ground-level photos." },
   benefits: {
     label: "A better project perspective",

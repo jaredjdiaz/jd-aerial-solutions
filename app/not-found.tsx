@@ -10,7 +10,7 @@ export default function NotFound() {
       <section className="not-found-hero">
         <div className="not-found-grid" aria-hidden="true" />
         <div className="not-found-copy">
-          <p>404 — Off course</p>
+          <p>404: Off course</p>
           <h1>This page isn&apos;t on the flight plan.</h1>
           <p>It may have moved, been renamed, or never existed. Let&apos;s get you back to a better view.</p>
           <div className="not-found-actions">

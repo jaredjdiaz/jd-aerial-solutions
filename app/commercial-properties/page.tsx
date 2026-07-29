@@ -10,7 +10,7 @@ const content: ServicePageContent = {
   kicker: "Commercial property imagery",
   title: { before: "Make the property", emphasis: "stand out." },
   description: "Aerial photo and video help show the full scale, setting, and exterior presence of a commercial property from a compelling perspective.",
-  imageAlt: "Aerial view of a commercial property and surrounding area",
+  imageAlt: "Aerial view of a construction development at sunset with mountains in the distance",
   intro: { label: "Why commercial aerial media", title: "Give the property a stronger first impression.", copy: "From marketing material to property documentation, polished aerial photos and video help people understand a commercial site more quickly and remember it more clearly." },
   benefits: {
     label: "Built for the bigger picture",
