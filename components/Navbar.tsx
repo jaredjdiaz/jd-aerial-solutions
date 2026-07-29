@@ -9,14 +9,14 @@ const desktopLinks = [
   ["Services", "/#services"],
   ["Portfolio", "/#portfolio"],
   ["About", "/about"],
-  ["Contact", "/#contact"],
+  ["Contact", "/contact"],
 ];
 
 const mobileLinks = [
   ["Home", "/"],
   ["Portfolio", "/#portfolio"],
   ["About", "/about"],
-  ["Contact", "/#contact"],
+  ["Contact", "/contact"],
 ];
 
 const serviceLinks = [
@@ -36,7 +36,7 @@ export default function Navbar() {
   return <header className="site-header">
     <Link href="/" className="logo" aria-label="JD Aerial Solutions home" onClick={closeMenu}><Image src="/images/jd-aerial-logo-lockup.png" alt="JD Aerial Solutions" width={1824} height={862} priority /></Link>
     <nav className="desktop-nav" aria-label="Main navigation">{desktopLinks.map(([label, href]) => <Link key={label} href={href}>{label}</Link>)}</nav>
-    <Link href="/#contact" className="quote-button desktop-quote"><span>Get a Quote</span><i aria-hidden="true">↗</i></Link>
+    <Link href="/contact" className="quote-button desktop-quote"><span>Get a Quote</span><i aria-hidden="true">↗</i></Link>
     <button type="button" className={`menu-toggle${menuOpen ? " is-open" : ""}`} aria-label={menuOpen ? "Close menu" : "Open menu"} aria-controls="mobile-navigation" aria-expanded={menuOpen} onClick={() => setMenuOpen((open) => !open)}><span /><span /><span /></button>
     <div id="mobile-navigation" className={`mobile-menu${menuOpen ? " is-open" : ""}`} aria-hidden={!menuOpen}>
       <nav className="mobile-nav" aria-label="Mobile navigation">
@@ -48,7 +48,7 @@ export default function Navbar() {
         </div>
         {mobileLinks.slice(1).map(([label, href]) => <Link key={label} href={href} onClick={closeMenu}>{label}</Link>)}
       </nav>
-      <Link href="/#contact" className="mobile-quote" onClick={closeMenu}>Get a Free Quote</Link>
+      <Link href="/contact" className="mobile-quote" onClick={closeMenu}>Get a Free Quote</Link>
     </div>
   </header>;
 }

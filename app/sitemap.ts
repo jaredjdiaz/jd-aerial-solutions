@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 const baseUrl = "https://jdaerialsolutions.com";
-const pages = ["", "/about", "/construction-progress", "/roof-documentation", "/3d-models", "/site-overview-imagery", "/commercial-properties", "/vacant-land-development", "/privacy"];
+const pages = ["", "/about", "/contact", "/construction-progress", "/roof-documentation", "/3d-models", "/site-overview-imagery", "/commercial-properties", "/vacant-land-development", "/privacy"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return pages.map((path, index) => ({
