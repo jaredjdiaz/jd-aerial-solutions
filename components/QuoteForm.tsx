@@ -1,6 +1,6 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import { FormEvent, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Script from "next/script";
 
@@ -14,10 +14,36 @@ const services = [
   "Not sure yet",
 ];
 
+declare global {
+  interface Window {
+    turnstile?: {
+      render: (container: HTMLElement, options: Record<string, unknown>) => string;
+      remove: (widgetId: string) => void;
+    };
+  }
+}
+
 export default function QuoteForm() {
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
   const [message, setMessage] = useState("");
+  const [turnstileReady, setTurnstileReady] = useState(false);
   const turnstileSiteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
+  const turnstileContainerRef = useRef<HTMLDivElement>(null);
+  const turnstileWidgetId = useRef<string | null>(null);
+
+  useEffect(() => {
+    if (!turnstileSiteKey || !turnstileReady || !turnstileContainerRef.current || !window.turnstile || turnstileWidgetId.current) return;
+    turnstileWidgetId.current = window.turnstile.render(turnstileContainerRef.current, {
+      sitekey: turnstileSiteKey,
+      theme: "dark",
+      size: "flexible",
+      "error-callback": () => setMessage("Spam protection could not load. Please disable any content blocker and try again."),
+    });
+    return () => {
+      if (turnstileWidgetId.current) window.turnstile?.remove(turnstileWidgetId.current);
+      turnstileWidgetId.current = null;
+    };
+  }, [turnstileReady, turnstileSiteKey]);
 
   async function submitForm(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -37,7 +63,7 @@ export default function QuoteForm() {
   }
 
   return <form className="quote-form" onSubmit={submitForm}>
-    {turnstileSiteKey && <Script src="https://challenges.cloudflare.com/turnstile/v0/api.js" strategy="afterInteractive" />}
+    {turnstileSiteKey && <Script id="cloudflare-turnstile" src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" strategy="afterInteractive" onReady={() => setTurnstileReady(true)} />}
     <div className="quote-form-heading"><p>Get a free quote</p><span>Fields marked <b aria-hidden="true">*</b> are required.</span></div>
     <div className="quote-form-grid">
       <label><span className="quote-form-label">Name <b aria-hidden="true">*</b></span><input name="name" autoComplete="name" required /></label>
@@ -49,7 +75,7 @@ export default function QuoteForm() {
       <label className="quote-form-message"><span className="quote-form-label">Project details <b aria-hidden="true">*</b></span><textarea name="details" rows={4} placeholder="What do you need documented, and when?" required /></label>
       <label className="quote-form-trap" aria-hidden="true">Website<input name="website" tabIndex={-1} autoComplete="off" /></label>
     </div>
-    {turnstileSiteKey && <div className="quote-form-turnstile cf-turnstile" data-sitekey={turnstileSiteKey} data-theme="dark" data-size="flexible" />}
+    {turnstileSiteKey && <div className="quote-form-turnstile" ref={turnstileContainerRef} />}
     <button className="quote-form-submit" type="submit" disabled={status === "sending"}>{status === "sending" ? "Sending…" : "Request a Quote"}<span aria-hidden="true">→</span></button>
     <p className="quote-form-privacy">By submitting, you agree to our <Link href="/privacy">Privacy Policy</Link>.</p>
     <p className={`quote-form-status${status === "error" ? " is-error" : ""}`} aria-live="polite">{message}</p>
