@@ -21,7 +21,7 @@ const content: ServicePageContent = {
       { number: "03", title: "Create a visual record", copy: "Keep a clear reference of the property exterior and site context for your files or project team." },
     ],
   },
-  deliverables: { label: "What you receive", heading: "Professional visuals, ready to share.", copy: "We focus on the perspectives that best communicate the property and its surroundings.", items: ["High-resolution aerial photography", "Short aerial video clips for listings and marketing", "Exterior and full-property overview imagery", "Access, parking, and surrounding-area context", "Organized digital delivery for marketing or documentation"] },
+  deliverables: { label: "What you receive", heading: "Professional visuals, ready to share.", copy: "We focus on the perspectives that best communicate the property and its surroundings.", items: ["High-resolution aerial photography", "Short aerial video clips for listings and marketing", "Vertical 9:16 video clips for Reels, Stories, TikTok, and Shorts", "Exterior and full-property overview imagery", "Access, parking, and surrounding-area context", "Organized digital delivery for marketing or documentation"] },
   process: {
     label: "How it works",
     heading: "Straightforward from start to finish.",
@@ -33,7 +33,7 @@ const content: ServicePageContent = {
   },
   faqs: [
     { question: "Can this be used for listings and marketing?", answer: "Yes. Aerial photography and short video clips are well suited for property listings, marketing material, websites, brochures, and presentations." },
-    { question: "Can you create short aerial videos for a property?", answer: "Yes. We can discuss short aerial video coverage for listings, websites, social media, and other property-marketing needs." },
+    { question: "Can you create short aerial videos for a property?", answer: "Yes. We can discuss horizontal video for listings and websites, plus vertical 9:16 clips for social media, Reels, Stories, TikTok, and Shorts." },
     { question: "Can you work around an operating business?", answer: "Yes. We coordinate timing and property access in advance to keep the flight as efficient and low-disruption as possible." },
     { question: "Does this include interior photography?", answer: "This service is focused on aerial and exterior imagery. If you have a specific project in mind, contact us and we can discuss the visual coverage you need." },
   ],

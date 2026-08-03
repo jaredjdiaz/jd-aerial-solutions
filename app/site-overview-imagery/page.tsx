@@ -21,7 +21,7 @@ const content: ServicePageContent = {
       { number: "03", title: "Create visuals worth sharing", copy: "Professional imagery gives your team a clean, useful asset for reports, presentations, and marketing." },
     ],
   },
-  deliverables: { label: "What you receive", heading: "Useful visuals, ready to use.", copy: "Each flight is planned around the perspective and context your project needs most.", items: ["High-resolution aerial still photography", "Wide site-overview images", "Property and surrounding-area context", "Organized digital delivery for easy sharing"] },
+  deliverables: { label: "What you receive", heading: "Useful visuals, ready to use.", copy: "Each flight is planned around the perspective and context your project needs most.", items: ["High-resolution aerial still photography", "Wide site-overview images", "Optional vertical 9:16 video clips for social media", "Property and surrounding-area context", "Organized digital delivery for easy sharing"] },
   process: {
     label: "How it works",
     heading: "Simple from quote to delivery.",

@@ -12,7 +12,7 @@ const services: { icon: ServiceIconName; title: string; description: string; hre
   { icon: "roof", title: "Roof Documentation", description: "Aerial visual documentation for roofs, building exteriors, towers, and hard-to-reach structures.", href: "/roof-documentation" },
   { icon: "model", title: "3D Models", description: "Visual 3D models of buildings, structures, and sites created from aerial imagery.", href: "/3d-models" },
   { icon: "site", title: "Site Overview Imagery", description: "High-resolution aerial overviews that help teams, clients, and stakeholders see the full site clearly.", href: "/site-overview-imagery" },
-  { icon: "commercial", title: "Commercial Properties", description: "Aerial photo and video for property marketing, site overviews, and asset documentation.", href: "/commercial-properties" },
+  { icon: "commercial", title: "Commercial Properties", description: "Aerial photo, video, and social-ready vertical clips for property marketing, site overviews, and asset documentation.", href: "/commercial-properties" },
   { icon: "land", title: "Vacant Land & Development", description: "Aerial imagery and site-overview visuals for land marketing, planning conversations, and development context.", href: "/vacant-land-development" },
 ];
 const work = [{ title: "Mountain Cabin", detail: "Personal aerial study · Bayfield, Colorado", category: "Property marketing", image: "/images/colorado-springs-cabin.png" }];
