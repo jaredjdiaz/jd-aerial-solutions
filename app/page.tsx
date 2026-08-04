@@ -15,7 +15,23 @@ const services: { icon: ServiceIconName; title: string; description: string; hre
   { icon: "commercial", title: "Commercial Properties", description: "Aerial photo, video, and social-ready vertical clips for property marketing, site overviews, and asset documentation.", href: "/commercial-properties" },
   { icon: "land", title: "Vacant Land & Development", description: "Aerial imagery and site-overview visuals for land marketing, planning conversations, and development context.", href: "/vacant-land-development" },
 ];
-const work = [{ title: "Mountain Cabin", detail: "Personal aerial study · Bayfield, Colorado", category: "Property marketing", image: "/images/colorado-springs-cabin.png" }];
+const work = [
+  { title: "Mountain Cabin", detail: "Personal aerial study · Bayfield, Colorado", category: "Property marketing", image: "/images/colorado-springs-cabin.png", alt: "Aerial view of a mountain cabin near Bayfield, Colorado" },
+  {
+    title: "Metal Roof Documentation",
+    detail: "Residential visual documentation study · Albuquerque, New Mexico",
+    category: "Roof documentation",
+    image: "/images/roof-documentation/metal-roof-overview.jpg",
+    alt: "Aerial overview of a residential metal roof in Albuquerque, New Mexico",
+    gallery: [
+      { image: "/images/roof-documentation/metal-roof-overview.jpg", alt: "Aerial overview of a residential metal roof in Albuquerque, New Mexico" },
+      { image: "/images/roof-documentation/metal-roof-roof-plane.jpg", alt: "Aerial view showing the roof planes and roof-mounted features" },
+      { image: "/images/roof-documentation/metal-roof-roof-detail.jpg", alt: "Straight-down aerial view of roof vents and a skylight" },
+      { image: "/images/roof-documentation/metal-roof-overhead.jpg", alt: "Overhead aerial view showing skylights and vents on a metal roof" },
+      { image: "/images/roof-documentation/metal-roof-top-down.jpg", alt: "Top-down aerial view of multiple roof sections and skylights" },
+    ],
+  },
+];
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
@@ -66,7 +82,7 @@ export default function Home() {
     <Hero />
     <section className="credentials" data-reveal><div><span className="credential-icon"><CredentialIcon icon="certified" /></span><span>FAA Part 107<br />Certified</span></div><div><span className="credential-icon"><CredentialIcon icon="local" /></span><span>Albuquerque,<br />New Mexico</span></div><div><span className="credential-icon"><CredentialIcon icon="safety" /></span><span>Safety<br />Focused</span></div><div><span className="credential-icon"><CredentialIcon icon="deliverables" /></span><span>Clear Project<br />Deliverables</span></div></section>
     <section id="services" className="content-section"><header className="section-heading" data-reveal><p>What we do</p><h2>Services</h2></header><div className="service-grid">{services.map(({ icon, title, description, href }) => <article key={title} data-reveal><span className="service-icon"><ServiceIcon icon={icon} /></span><h3>{title}</h3><p>{description}</p><Link className="service-card-link" href={href ?? "#contact"}>{href ? "Learn more" : "Ask about this"}<span aria-hidden="true">→</span></Link></article>)}</div><aside className="capability-note" data-reveal><span className="capability-icon"><ServiceIcon icon="mapping" /></span><div><p>Expanding capability</p><h3>Aerial Mapping</h3><span>Accurate mapping requires a specialized capture and accuracy workflow. Contact us to discuss your project and current availability.</span></div><a href="#contact">Ask About Mapping</a></aside></section>
-    <section id="portfolio" className="portfolio content-section"><header className="section-heading"><p>Selected flights</p><h2>Recent Work</h2></header><div className="work-grid">{work.map((item) => <PortfolioImageCard key={item.title} {...item} alt="Aerial view of a mountain cabin near Bayfield, Colorado" />)}</div><a className="portfolio-button" href="#contact">Ask About Your Project</a></section>
+    <section id="portfolio" className="portfolio content-section"><header className="section-heading"><p>Selected flights</p><h2>Recent Work</h2></header><div className="work-grid">{work.map((item) => <PortfolioImageCard key={item.title} {...item} />)}</div><a className="portfolio-button" href="#contact">Ask About Your Project</a></section>
     <section id="about" className="about-band"><div><p>Why work with JD Aerial Solutions?</p><h2>Precision from above.<br />Results you can build on.</h2></div><div className="reasons"><span><i className="reason-icon"><ReasonIcon icon="local" /></i><b>Local &amp;<br />Reliable</b></span><span><i className="reason-icon"><ReasonIcon icon="fast" /></i><b>Fast<br />Turnaround</b></span><span><i className="reason-icon"><ReasonIcon icon="accurate" /></i><b>Clear Aerial<br />Visuals</b></span><span><i className="reason-icon"><ReasonIcon icon="reports" /></i><b>Clear<br />Deliverables</b></span><span><i className="reason-icon"><ReasonIcon icon="safe" /></i><b>Safety<br />Focused</b></span></div></section>
     <section id="contact" className="contact-section"><div className="contact-copy"><p className="gold-kicker">Let’s work together</p><h2>Have a project in mind?</h2><p>Tell us what you need to see from above. We&apos;ll follow up with a straightforward plan and quote.</p><a className="contact-email" href="mailto:info@jdaerialsolutions.com">info@jdaerialsolutions.com</a><span>Albuquerque, New Mexico</span></div><QuoteForm /></section>
     <Footer />
