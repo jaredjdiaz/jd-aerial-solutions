@@ -35,7 +35,7 @@ const content: ServicePageContent = {
     { question: "Can this be used for listings and marketing?", answer: "Yes. Aerial photography and short video clips are well suited for property listings, marketing material, websites, brochures, and presentations." },
     { question: "Can you create short aerial videos for a property?", answer: "Yes. We can discuss horizontal video for listings and websites, plus vertical 9:16 clips for social media, Reels, Stories, TikTok, and Shorts." },
     { question: "Can you work around an operating business?", answer: "Yes. We coordinate timing and property access in advance to keep the flight as efficient and low-disruption as possible." },
-    { question: "Does this include interior photography?", answer: "This service is focused on aerial and exterior imagery. If you have a specific project in mind, contact us and we can discuss the visual coverage you need." },
+    { question: "Does this include interior photography?", answer: "Interior photography and video can be discussed as part of a commercial-property project. Tell us what you need to show, and we can plan the right visual coverage." },
   ],
   cta: { kicker: "Ready to make the property stand out?", heading: "Let's create visuals that give people the full picture." },
 };
