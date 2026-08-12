@@ -7,6 +7,9 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Roof, Building & Tower Documentation | JD Aerial Solutions",
   description: "Aerial visual documentation for roofs, building exteriors, towers, and hard-to-reach structures in Albuquerque, New Mexico.",
+  alternates: { canonical: "/roof-documentation" },
+  openGraph: { url: "/roof-documentation", title: "Roof, Building & Tower Documentation | JD Aerial Solutions", description: "Aerial visual documentation for roofs, building exteriors, towers, and hard-to-reach structures in Albuquerque, New Mexico." },
+  twitter: { title: "Roof, Building & Tower Documentation | JD Aerial Solutions", description: "Aerial visual documentation for roofs, building exteriors, towers, and hard-to-reach structures in Albuquerque, New Mexico." },
 };
 
 const benefits = [

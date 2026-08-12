@@ -4,6 +4,9 @@ import ServiceDetailPage, { type ServicePageContent } from "@/components/Service
 export const metadata: Metadata = {
   title: "Vacant Land Aerial Photography | JD Aerial Solutions",
   description: "Aerial photography and site-overview imagery for vacant land and development conversations in Albuquerque, New Mexico.",
+  alternates: { canonical: "/vacant-land-development" },
+  openGraph: { url: "/vacant-land-development", title: "Vacant Land Aerial Photography | JD Aerial Solutions", description: "Aerial photography and site-overview imagery for vacant land and development conversations in Albuquerque, New Mexico." },
+  twitter: { title: "Vacant Land Aerial Photography | JD Aerial Solutions", description: "Aerial photography and site-overview imagery for vacant land and development conversations in Albuquerque, New Mexico." },
 };
 
 const content: ServicePageContent = {

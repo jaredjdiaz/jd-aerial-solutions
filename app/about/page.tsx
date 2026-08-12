@@ -6,6 +6,9 @@ import Navbar from "@/components/Navbar";
 export const metadata = {
   title: "About | JD Aerial Solutions",
   description: "Meet Jared Diaz, FAA Part 107 Remote Pilot and owner of JD Aerial Solutions in Albuquerque, New Mexico.",
+  alternates: { canonical: "/about" },
+  openGraph: { url: "/about", title: "About JD Aerial Solutions", description: "Meet Jared Diaz, FAA Part 107 Remote Pilot and owner of JD Aerial Solutions in Albuquerque, New Mexico." },
+  twitter: { title: "About JD Aerial Solutions", description: "Meet Jared Diaz, FAA Part 107 Remote Pilot and owner of JD Aerial Solutions in Albuquerque, New Mexico." },
 };
 
 const values = [

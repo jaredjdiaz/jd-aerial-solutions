@@ -5,6 +5,9 @@ import QuoteForm from "@/components/QuoteForm";
 export const metadata = {
   title: "Contact | JD Aerial Solutions",
   description: "Request a quote for professional drone photography, aerial video, and visual documentation from JD Aerial Solutions in Albuquerque, New Mexico.",
+  alternates: { canonical: "/contact" },
+  openGraph: { url: "/contact", title: "Contact JD Aerial Solutions", description: "Request a quote for professional drone photography, aerial video, and visual documentation in Albuquerque, New Mexico." },
+  twitter: { title: "Contact JD Aerial Solutions", description: "Request a quote for professional drone photography, aerial video, and visual documentation in Albuquerque, New Mexico." },
 };
 
 export default function ContactPage() {

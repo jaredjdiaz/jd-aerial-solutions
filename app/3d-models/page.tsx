@@ -4,6 +4,9 @@ import ServiceDetailPage, { type ServicePageContent } from "@/components/Service
 export const metadata: Metadata = {
   title: "3D Models From Aerial Imagery | JD Aerial Solutions",
   description: "Visual 3D models of buildings, structures, and sites created from aerial imagery in Albuquerque, New Mexico.",
+  alternates: { canonical: "/3d-models" },
+  openGraph: { url: "/3d-models", title: "3D Models From Aerial Imagery | JD Aerial Solutions", description: "Visual 3D models of buildings, structures, and sites created from aerial imagery in Albuquerque, New Mexico." },
+  twitter: { title: "3D Models From Aerial Imagery | JD Aerial Solutions", description: "Visual 3D models of buildings, structures, and sites created from aerial imagery in Albuquerque, New Mexico." },
 };
 
 const content: ServicePageContent = {

@@ -7,6 +7,9 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Construction Progress Photography | JD Aerial Solutions",
   description: "Aerial construction progress photography and project documentation for teams in Albuquerque, New Mexico.",
+  alternates: { canonical: "/construction-progress" },
+  openGraph: { url: "/construction-progress", title: "Construction Progress Photography | JD Aerial Solutions", description: "Aerial construction progress photography and project documentation for teams in Albuquerque, New Mexico." },
+  twitter: { title: "Construction Progress Photography | JD Aerial Solutions", description: "Aerial construction progress photography and project documentation for teams in Albuquerque, New Mexico." },
 };
 
 const benefits = [

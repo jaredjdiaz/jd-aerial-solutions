@@ -7,6 +7,8 @@ export const metadata: Metadata = {
   title: "Privacy Policy",
   description: "Privacy Policy for JD Aerial Solutions.",
   alternates: { canonical: "/privacy" },
+  openGraph: { url: "/privacy", title: "Privacy Policy | JD Aerial Solutions", description: "Privacy Policy for JD Aerial Solutions." },
+  twitter: { title: "Privacy Policy | JD Aerial Solutions", description: "Privacy Policy for JD Aerial Solutions." },
 };
 
 export default function PrivacyPage() {

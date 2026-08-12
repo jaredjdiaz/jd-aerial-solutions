@@ -4,6 +4,9 @@ import ServiceDetailPage, { type ServicePageContent } from "@/components/Service
 export const metadata: Metadata = {
   title: "Commercial Property Aerial Photo & Video | JD Aerial Solutions",
   description: "Professional aerial photo and video for commercial properties, marketing, and visual documentation in Albuquerque, New Mexico.",
+  alternates: { canonical: "/commercial-properties" },
+  openGraph: { url: "/commercial-properties", title: "Commercial Property Aerial Photo & Video | JD Aerial Solutions", description: "Professional aerial photo and video for commercial properties, marketing, and visual documentation in Albuquerque, New Mexico." },
+  twitter: { title: "Commercial Property Aerial Photo & Video | JD Aerial Solutions", description: "Professional aerial photo and video for commercial properties, marketing, and visual documentation in Albuquerque, New Mexico." },
 };
 
 const content: ServicePageContent = {
