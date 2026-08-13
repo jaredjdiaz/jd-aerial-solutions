@@ -6,7 +6,7 @@ import Script from "next/script";
 
 const services = [
   "Construction Progress",
-  "Roof, Building & Tower Documentation",
+  "Roof Documentation",
   "3D Models",
   "Site Overview Imagery",
   "Commercial Properties",

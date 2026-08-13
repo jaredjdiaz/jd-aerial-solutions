@@ -9,7 +9,7 @@ type ServiceIconName = "construction" | "roof" | "mapping" | "model" | "site" | 
 
 const services: { icon: ServiceIconName; title: string; description: string; href?: string }[] = [
   { icon: "construction", title: "Construction Progress", description: "Track progress, keep projects on schedule, and document every phase from start to finish.", href: "/construction-progress" },
-  { icon: "roof", title: "Roof Documentation", description: "Aerial visual documentation for roofs, building exteriors, towers, and hard-to-reach structures.", href: "/roof-documentation" },
+  { icon: "roof", title: "Roof Documentation", description: "Aerial roof inspection imagery and visual documentation for roofs and hard-to-reach structures.", href: "/roof-documentation" },
   { icon: "model", title: "3D Models", description: "Visual 3D models of buildings, structures, and sites created from aerial imagery.", href: "/3d-models" },
   { icon: "site", title: "Site Overview Imagery", description: "High-resolution aerial overviews that help teams, clients, and stakeholders see the full site clearly.", href: "/site-overview-imagery" },
   { icon: "commercial", title: "Commercial Properties", description: "Aerial photo, video, and social-ready vertical clips for property marketing, site overviews, and asset documentation.", href: "/commercial-properties" },
@@ -31,9 +31,9 @@ const structuredData = {
   name: "JD Aerial Solutions",
   url: "https://jdaerialsolutions.com",
   email: "info@jdaerialsolutions.com",
-  description: "Professional drone photography, aerial visual documentation, construction progress imagery, and property visuals in Albuquerque, New Mexico.",
+  description: "Professional drone photography, aerial roof inspection imagery, construction progress photography, and property visuals in Albuquerque, New Mexico.",
   areaServed: { "@type": "City", name: "Albuquerque", address: { "@type": "PostalAddress", addressRegion: "NM", addressCountry: "US" } },
-  serviceType: ["Construction progress photography", "Roof and exterior visual documentation", "Aerial site overview imagery", "Commercial property aerial photo and video", "Aerial 3D models"],
+  serviceType: ["Construction progress photography", "Drone roof inspection imagery and visual documentation", "Aerial site overview imagery", "Commercial property aerial photo and video", "Aerial 3D models"],
 };
 
 function ServiceIcon({ icon }: { icon: ServiceIconName }) {
