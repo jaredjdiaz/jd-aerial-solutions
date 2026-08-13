@@ -38,7 +38,7 @@ export default function RoofDocumentationPage() {
     </section>
     <section className="service-page-section service-intro">
       <p className="section-label">Why aerial roof documentation</p>
-      <div><h2>Useful imagery, clearly organized.</h2><p>Whether you are planning work, recording visible conditions, or sharing project context, aerial photography gives you a strong visual reference without relying only on ground-level photos.</p></div>
+      <div><h2>Useful imagery, clearly organized.</h2><p>Drone roof inspection imagery helps contractors, property managers, and building owners maintain a clear visual record of visible roof areas. Whether you are planning work, recording visible conditions, or sharing project context, aerial photography gives you a strong visual reference without relying only on ground-level photos.</p></div>
     </section>
     <section className="service-page-section service-benefits"><header><p className="section-label">Built around your project</p><h2>The perspective that ground photos miss.</h2></header><div className="benefit-grid">{benefits.map(([number, title, copy]) => <article key={number}><span>{number}</span><h3>{title}</h3><p>{copy}</p></article>)}</div></section>
     <section className="service-page-section service-deliverables"><div><p className="section-label">What you receive</p><h2>Ready when you need to share it.</h2><p>Every project is planned around the property, the visuals you need, and a straightforward delivery that is easy to use.</p></div><ul>{deliverables.map((item) => <li key={item}><span aria-hidden="true">&#10003;</span>{item}</li>)}</ul></section>
