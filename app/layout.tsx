@@ -4,11 +4,11 @@ import Analytics from "@/components/Analytics";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://jdaerialsolutions.com"),
-  title: { default: "JD Aerial Solutions | Drone Services in Albuquerque, NM", template: "%s | JD Aerial Solutions" },
-  description: "Professional drone photography, aerial documentation, construction progress imagery, and property visuals in Albuquerque, New Mexico.",
+  title: { default: "Commercial Property Documentation & Construction Progress | JD Aerial Solutions", template: "%s | JD Aerial Solutions" },
+  description: "Commercial property documentation, construction progress imagery, and aerial site visuals for contractors, property managers, and developers in Albuquerque, New Mexico.",
   alternates: { canonical: "/" },
-  openGraph: { type: "website", locale: "en_US", url: "/", siteName: "JD Aerial Solutions", title: "JD Aerial Solutions | Drone Services in Albuquerque, NM", description: "Professional drone photography, aerial documentation, construction progress imagery, and property visuals in Albuquerque, New Mexico.", images: [{ url: "/images/jd-aerial-hero.png", alt: "JD Aerial Solutions aerial imagery" }] },
-  twitter: { card: "summary_large_image", title: "JD Aerial Solutions | Drone Services in Albuquerque, NM", description: "Professional drone photography and aerial documentation in Albuquerque, New Mexico.", images: ["/images/jd-aerial-hero.png"] },
+  openGraph: { type: "website", locale: "en_US", url: "/", siteName: "JD Aerial Solutions", title: "Commercial Property Documentation & Construction Progress | JD Aerial Solutions", description: "Commercial property documentation, construction progress imagery, and aerial site visuals for contractors, property managers, and developers in Albuquerque, New Mexico.", images: [{ url: "/images/jd-aerial-hero.png", alt: "JD Aerial Solutions aerial imagery" }] },
+  twitter: { card: "summary_large_image", title: "Commercial Property Documentation & Construction Progress | JD Aerial Solutions", description: "Commercial property documentation, construction progress imagery, and aerial site visuals in Albuquerque, New Mexico.", images: ["/images/jd-aerial-hero.png"] },
   icons: { icon: "/images/jd-favicon-centered.png?v=1" },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 } },
 };

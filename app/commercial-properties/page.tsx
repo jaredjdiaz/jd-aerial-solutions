@@ -2,19 +2,19 @@ import type { Metadata } from "next";
 import ServiceDetailPage, { type ServicePageContent } from "@/components/ServiceDetailPage";
 
 export const metadata: Metadata = {
-  title: "Commercial Property Aerial Photo & Video | JD Aerial Solutions",
-  description: "Professional aerial photo and video for commercial properties, marketing, and visual documentation in Albuquerque, New Mexico.",
+  title: "Commercial Property Documentation | Albuquerque, NM | JD Aerial Solutions",
+  description: "Aerial commercial property documentation, exterior imagery, site visuals, and photo and video for property managers, developers, and building owners in Albuquerque, New Mexico.",
   alternates: { canonical: "/commercial-properties" },
-  openGraph: { url: "/commercial-properties", title: "Commercial Property Aerial Photo & Video | JD Aerial Solutions", description: "Professional aerial photo and video for commercial properties, marketing, and visual documentation in Albuquerque, New Mexico." },
-  twitter: { title: "Commercial Property Aerial Photo & Video | JD Aerial Solutions", description: "Professional aerial photo and video for commercial properties, marketing, and visual documentation in Albuquerque, New Mexico." },
+  openGraph: { url: "/commercial-properties", title: "Commercial Property Documentation | Albuquerque, NM | JD Aerial Solutions", description: "Aerial commercial property documentation, exterior imagery, site visuals, and photo and video for property managers, developers, and building owners in Albuquerque, New Mexico." },
+  twitter: { title: "Commercial Property Documentation | Albuquerque, NM | JD Aerial Solutions", description: "Aerial commercial property documentation, exterior imagery, site visuals, and photo and video for property managers, developers, and building owners in Albuquerque, New Mexico." },
 };
 
 const content: ServicePageContent = {
-  kicker: "Commercial property imagery",
-  title: { before: "Make the property", emphasis: "stand out." },
-  description: "Aerial photo and video help show the full scale, setting, and exterior presence of a commercial property from a compelling perspective.",
+  kicker: "Commercial property documentation",
+  title: { before: "Document the property", emphasis: "from above." },
+  description: "Aerial imagery helps property managers, developers, and building owners document exterior conditions, site context, access, and the full scale of a commercial property.",
   imageAlt: "Aerial view of a construction development at sunset with mountains in the distance",
-  intro: { label: "Why commercial aerial media", title: "Give the property a stronger first impression.", copy: "From marketing material to property documentation, polished aerial photos and video help people understand a commercial site more quickly and remember it more clearly." },
+  intro: { label: "Why commercial documentation", title: "A clear visual record for the people who manage it.", copy: "From property records and maintenance planning to marketing material and project updates, aerial photos and video help teams understand a commercial site more quickly and communicate with confidence." },
   benefits: {
     label: "Built for the bigger picture",
     heading: "Show more than a street-level view.",
