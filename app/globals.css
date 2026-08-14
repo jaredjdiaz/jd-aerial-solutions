@@ -64,7 +64,7 @@ h1,h2,h3,.hero-copy>p:first-child { font-family:"Montserrat",Arial,Helvetica,san
 .hero-image::after { content:""; position:absolute; inset:0; background:linear-gradient(90deg,var(--navy) 0%,rgba(7,24,45,.96) 8%,rgba(7,24,45,.67) 30%,rgba(7,24,45,.15) 68%,rgba(7,24,45,.23) 100%); }
 .grid-overlay { z-index:0; }
 .hero-copy { max-width:740px; }
-@media(max-width:600px) { .hero { min-height:500px; } .hero-image { inset:0; opacity:.66; } .hero-image::after { background:linear-gradient(90deg,rgba(7,24,45,.92),rgba(7,24,45,.7)); } }
+@media(max-width:600px) { .hero { min-height:500px; width:100%; padding-right:25px; padding-left:25px; } .hero-copy { width:100%; min-width:0; max-width:100%; } .hero h1 { max-width:100%; overflow-wrap:anywhere; } .hero h2,.hero-detail { max-width:100%; } .hero-actions { max-width:100%; } .hero-image { inset:0; opacity:.66; } .hero-image::after { background:linear-gradient(90deg,rgba(7,24,45,.92),rgba(7,24,45,.7)); } }
 
 /* Service cards */
 #services { background:linear-gradient(180deg,#fbfcfe 0%,#f4f7fa 100%); }
