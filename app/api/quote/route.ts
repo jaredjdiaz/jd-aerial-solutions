@@ -31,5 +31,19 @@ export async function POST(request: Request) {
     body: JSON.stringify({ from: "JD Aerial Website <quotes@jdaerialsolutions.com>", to: [recipient], reply_to: email, subject: `Quote request: ${service}: ${name}`, html: `<h2>New JD Aerial quote request</h2>${rows}` }),
   });
   if (!response.ok) return NextResponse.json({ error: "We couldn’t send that request. Please email us directly." }, { status: 502 });
+  // A confirmation is helpful, but a delivery issue with it should never make a
+  // successfully received quote request look like it failed to the customer.
+  await fetch("https://api.resend.com/emails", {
+    method: "POST",
+    headers: { Authorization: `Bearer ${process.env.RESEND_API_KEY}`, "Content-Type": "application/json" },
+    body: JSON.stringify({
+      from: "JD Aerial Solutions <quotes@jdaerialsolutions.com>",
+      to: [email],
+      reply_to: recipient,
+      subject: "We received your free quote request | JD Aerial Solutions",
+      html: `<p>Hi ${escapeHtml(name)},</p><p>Thanks for contacting JD Aerial Solutions. Your free quote request has landed safely, and I’ll be in contact as soon as possible.</p><p>If you need to add anything, reply to this email or contact me at <a href="mailto:info@jdaerialsolutions.com">info@jdaerialsolutions.com</a>.</p><p>Jared Diaz<br />JD Aerial Solutions</p>`,
+      text: `Hi ${name},\n\nThanks for contacting JD Aerial Solutions. Your free quote request has landed safely, and I’ll be in contact as soon as possible.\n\nIf you need to add anything, reply to this email or contact me at info@jdaerialsolutions.com.\n\nJared Diaz\nJD Aerial Solutions`,
+    }),
+  }).catch(() => undefined);
   return NextResponse.json({ ok: true });
 }
