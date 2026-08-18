@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title>JD Aerial Solutions drone icon</title>
+  <rect width="512" height="512" rx="104" fill="#071e36"/>
+  <g fill="#f8fbff">
+    <path d="M205 220 119 174l-18 31 86 54zM307 220l86-46 18 31-86 54zM205 258l-86 46-18-31 86-54zM307 258l86 46 18-31-86-54z"/>
+    <rect x="181" y="201" width="150" height="88" rx="32"/>
+    <rect x="89" y="158" width="39" height="66" rx="18"/>
+    <rect x="384" y="158" width="39" height="66" rx="18"/>
+    <rect x="89" y="288" width="39" height="66" rx="18"/>
+    <rect x="384" y="288" width="39" height="66" rx="18"/>
+    <ellipse cx="108" cy="151" rx="76" ry="17"/>
+    <ellipse cx="404" cy="151" rx="76" ry="17"/>
+    <ellipse cx="108" cy="361" rx="76" ry="17"/>
+    <ellipse cx="404" cy="361" rx="76" ry="17"/>
+    <path d="M219 272h25l-19 53h-27zM268 272h25l21 53h-27z"/>
+    <rect x="221" y="267" width="70" height="65" rx="19"/>
+  </g>
+  <circle cx="256" cy="299" r="19" fill="#76b7ff"/>
+  <circle cx="256" cy="299" r="8" fill="#071e36"/>
+</svg>
