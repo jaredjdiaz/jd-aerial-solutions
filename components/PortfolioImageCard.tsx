@@ -37,7 +37,7 @@ export default function PortfolioImageCard({ title, detail, category, image, alt
         <button className="portfolio-lightbox-close" type="button" onClick={() => setIsOpen(false)} aria-label="Close full-size image">&times;</button>
         {"image" in activeMedia
           ? <div className="portfolio-lightbox-image"><Image src={activeMedia.image} alt={activeMedia.alt} fill sizes="95vw" priority /></div>
-          : <video className="portfolio-lightbox-video" src={activeMedia.video} controls autoPlay playsInline aria-label={activeMedia.alt} />}
+          : <video className="portfolio-lightbox-video" src={activeMedia.video} controls autoPlay playsInline preload="metadata" aria-label={activeMedia.alt}>Your browser does not support HTML video.</video>}
         {hasGallery && <div className="portfolio-lightbox-controls">
           <button type="button" onClick={showPrevious} aria-label="Show previous portfolio image">&larr;</button>
           <span>{activeIndex + 1} of {media.length}</span>

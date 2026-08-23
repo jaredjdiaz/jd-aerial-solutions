@@ -17,6 +17,18 @@ const services: { icon: ServiceIconName; title: string; description: string; hre
 ];
 const work = [
   {
+    title: "First Financial Commercial Property",
+    detail: "Commercial property aerial documentation · Albuquerque, New Mexico",
+    category: "Commercial Property Documentation",
+    image: "/images/first-financial-commercial-property/first-financial-commercial-property-01.jpg",
+    alt: "Aerial view of the First Financial commercial property in Albuquerque, New Mexico",
+    gallery: [
+      { image: "/images/first-financial-commercial-property/first-financial-commercial-property-01.jpg", alt: "Front aerial overview of the First Financial commercial property and surrounding area in Albuquerque" },
+      { image: "/images/first-financial-commercial-property/first-financial-commercial-property-02.jpg", alt: "Additional aerial view of the First Financial commercial property in Albuquerque" },
+      { video: "/images/first-financial-commercial-property/first-financial-commercial-property-video.mp4", alt: "Aerial video of the First Financial commercial property in Albuquerque, New Mexico" },
+    ],
+  },
+  {
     title: "Journal Center Commercial Property",
     detail: "Personal aerial documentation project · Albuquerque, New Mexico",
     category: "Commercial Property Documentation",
@@ -24,7 +36,7 @@ const work = [
     alt: "Aerial view of a commercial property near Journal Center in Albuquerque, New Mexico",
     gallery: [
       { image: "/images/journal-center-commercial-property/journal-center-commercial-property-01.jpg", alt: "Aerial overview of a commercial property near Journal Center with the Sandia Mountains behind it" },
-      { video: "/images/journal-center-commercial-property/journal-center-commercial-property-video.mov", alt: "Aerial video of a commercial property near Journal Center in Albuquerque, New Mexico" },
+      { video: "/images/journal-center-commercial-property/journal-center-commercial-property-video.mp4", alt: "Aerial video of a commercial property near Journal Center in Albuquerque, New Mexico" },
     ],
   },
   {
@@ -35,7 +47,7 @@ const work = [
     alt: "Aerial view of a retail property near Journal Center in Albuquerque, New Mexico",
     gallery: [
       { image: "/images/journal-center-retail-property/journal-center-retail-property-01.jpg", alt: "Aerial overview of a retail property and surrounding commercial area near Journal Center" },
-      { video: "/images/journal-center-retail-property/journal-center-retail-property-video.mov", alt: "Aerial video of a retail property near Journal Center in Albuquerque, New Mexico" },
+      { video: "/images/journal-center-retail-property/journal-center-retail-property-video.mp4", alt: "Aerial video of a retail property near Journal Center in Albuquerque, New Mexico" },
     ],
   },
   {
@@ -47,7 +59,7 @@ const work = [
     gallery: [
       { image: "/images/journal-center-vacant-land/journal-center-vacant-land-01.jpg", alt: "Wide aerial overview of vacant land near Journal Center in Albuquerque, New Mexico" },
       { image: "/images/journal-center-vacant-land/journal-center-vacant-land-02.jpg", alt: "Elevated aerial view of the vacant property and surrounding Journal Center development" },
-      { video: "/images/journal-center-vacant-land/journal-center-vacant-land-video.mov", alt: "Aerial video of vacant land near Journal Center in Albuquerque, New Mexico" },
+      { video: "/images/journal-center-vacant-land/journal-center-vacant-land-video.mp4", alt: "Aerial video of vacant land near Journal Center in Albuquerque, New Mexico" },
     ],
   },
   { title: "Mountain Cabin", detail: "Personal aerial study · Bayfield, Colorado", category: "Property marketing", image: "/images/colorado-springs-cabin.png", alt: "Aerial view of a mountain cabin near Bayfield, Colorado" },
