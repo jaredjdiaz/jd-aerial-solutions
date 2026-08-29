@@ -19,6 +19,7 @@ declare global {
     turnstile?: {
       render: (container: HTMLElement, options: Record<string, unknown>) => string;
       remove: (widgetId: string) => void;
+      reset: (widgetId: string) => void;
     };
   }
 }
@@ -50,16 +51,23 @@ export default function QuoteForm() {
     setStatus("sending");
     setMessage("");
     const form = event.currentTarget;
-    const response = await fetch("/api/quote", { method: "POST", body: new FormData(form) });
-    const result = await response.json().catch(() => ({ error: "Something went wrong. Please email us directly." }));
-    if (!response.ok) {
+    try {
+      const response = await fetch("/api/quote", { method: "POST", body: new FormData(form) });
+      const result = await response.json().catch(() => ({ error: "Something went wrong. Please email us directly." }));
+      if (!response.ok) {
+        setStatus("error");
+        setMessage(result.error ?? "Something went wrong. Please email us directly.");
+        return;
+      }
+      form.reset();
+      setStatus("success");
+      setMessage("Thanks, your request is in. We’ll be in touch before takeoff.");
+    } catch {
       setStatus("error");
-      setMessage(result.error ?? "Something went wrong. Please email us directly.");
-      return;
+      setMessage("Something went wrong. Please email us directly.");
+    } finally {
+      if (turnstileWidgetId.current) window.turnstile?.reset(turnstileWidgetId.current);
     }
-    form.reset();
-    setStatus("success");
-    setMessage("Thanks, your request is in. We’ll be in touch before takeoff.");
   }
 
   return <form className="quote-form" onSubmit={submitForm}>
