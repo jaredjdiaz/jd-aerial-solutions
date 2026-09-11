@@ -77,6 +77,7 @@ const structuredData = {
   name: "JD Aerial Solutions",
   url: "https://jdaerialsolutions.com",
   email: "info@jdaerialsolutions.com",
+  sameAs: ["https://www.facebook.com/people/JD-Aerial-Solutions/61594337489275/"],
   description: "Commercial property documentation, construction progress imagery, aerial roof inspection imagery, and site visuals in Albuquerque, New Mexico.",
   areaServed: { "@type": "City", name: "Albuquerque", address: { "@type": "PostalAddress", addressRegion: "NM", addressCountry: "US" } },
   serviceType: ["Construction progress photography", "Drone roof inspection imagery and visual documentation", "Aerial site overview imagery", "Commercial property documentation", "Aerial 3D models"],

@@ -19,6 +19,7 @@ export default function ContactPage() {
         <h1>Have a project in mind?</h1>
         <p>Tell us what you need to see from above. We&apos;ll follow up with a straightforward plan and quote.</p>
         <a className="contact-email" href="mailto:info@jdaerialsolutions.com">info@jdaerialsolutions.com</a>
+        <a className="contact-social" href="https://www.facebook.com/people/JD-Aerial-Solutions/61594337489275/" target="_blank" rel="noopener noreferrer">Follow JD Aerial Solutions on Facebook</a>
         <span>Albuquerque, New Mexico</span>
       </div>
       <QuoteForm />
