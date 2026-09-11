@@ -12,15 +12,15 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: "/images/jd-favicon-centered.png?v=3",
+        url: "/images/jd-logo-mark-clean.png?v=20260911",
         type: "image/png",
         sizes: "512x512",
       },
     ],
-    shortcut: "/images/jd-favicon-centered.png?v=3",
+    shortcut: "/images/jd-logo-mark-clean.png?v=20260911",
     apple: [
       {
-        url: "/images/jd-favicon-centered.png?v=3",
+        url: "/images/jd-logo-mark-clean.png?v=20260911",
         type: "image/png",
         sizes: "180x180",
       },

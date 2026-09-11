@@ -34,7 +34,7 @@ export default function Navbar() {
   const closeMenu = () => { setMenuOpen(false); setServicesOpen(false); };
 
   return <header className="site-header">
-    <Link href="/" className="logo" aria-label="JD Aerial Solutions home" onClick={closeMenu}><Image src="/images/jd-aerial-logo-lockup.png" alt="JD Aerial Solutions" width={1824} height={862} priority /></Link>
+    <Link href="/" className="logo" aria-label="JD Aerial Solutions home" onClick={closeMenu}><Image src="/images/jd-logo-lockup-clean.png" alt="JD Aerial Solutions" width={1774} height={887} priority /></Link>
     <nav className="desktop-nav" aria-label="Main navigation">{desktopLinks.map(([label, href]) => <Link key={label} href={href}>{label}</Link>)}</nav>
     <Link href="/contact" className="quote-button desktop-quote"><span>Get a Quote</span><i aria-hidden="true">↗</i></Link>
     <button type="button" className={`menu-toggle${menuOpen ? " is-open" : ""}`} aria-label={menuOpen ? "Close menu" : "Open menu"} aria-controls="mobile-navigation" aria-expanded={menuOpen} onClick={() => setMenuOpen((open) => !open)}><span /><span /><span /></button>
