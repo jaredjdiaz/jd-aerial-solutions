@@ -24,7 +24,7 @@ export default function ServiceDetailPage({ content }: { content: ServicePageCon
         <div className="service-page-hero-heading"><p className="service-kicker">{content.kicker}</p><h1>{content.title.before} <em>{content.title.emphasis}</em></h1></div>
         <div className="service-page-hero-details"><p>{content.description}</p><div className="service-page-actions"><Link href="/contact" className="blue-button quote-hero"><span>Get a Free Quote</span><i aria-hidden="true">&rarr;</i></Link><Link href="/#services" className="outline-button">All Services</Link></div></div>
       </div>
-      <div className="service-page-image"><Image src="/images/jd-aerial-hero.png" alt={content.imageAlt} fill priority sizes="(max-width: 850px) 100vw, 50vw" /></div>
+      <div className="service-page-image"><Image src="/images/sandia-rainbow-home-hero.jpeg" alt="Sandia Mountains beneath colorful clouds and a rainbow in Albuquerque, New Mexico" fill priority unoptimized sizes="(max-width: 850px) 100vw, 58vw" /></div>
     </section>
     <section className="service-page-section service-intro">
       <p className="section-label">{content.intro.label}</p>

@@ -34,7 +34,7 @@ export default function RoofDocumentationPage() {
         <div className="service-page-hero-heading"><p className="service-kicker">Roof documentation photography</p><h1>A clearer view <em>from above.</em></h1></div>
         <div className="service-page-hero-details"><p>High-resolution drone imagery helps property owners, roofers, and project teams review visible roof details and document hard-to-reach areas from a better perspective.</p><div className="service-page-actions"><Link href="/contact" className="blue-button quote-hero"><span>Get a Free Quote</span><i aria-hidden="true">&rarr;</i></Link><Link href="/#services" className="outline-button">All Services</Link></div></div>
       </div>
-      <div className="service-page-image"><Image src="/images/jd-aerial-hero.png" alt="Aerial view of a construction development at sunset with mountains in the distance" fill priority sizes="(max-width: 850px) 100vw, 50vw" /></div>
+      <div className="service-page-image"><Image src="/images/sandia-rainbow-home-hero.jpeg" alt="Sandia Mountains beneath colorful clouds and a rainbow in Albuquerque, New Mexico" fill priority unoptimized sizes="(max-width: 850px) 100vw, 58vw" /></div>
     </section>
     <section className="service-page-section service-intro">
       <p className="section-label">Why aerial roof documentation</p>

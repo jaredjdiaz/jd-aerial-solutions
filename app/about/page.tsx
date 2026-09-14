@@ -21,6 +21,7 @@ export default function AboutPage() {
   return <main className="about-page">
     <Navbar />
     <section className="about-hero">
+      <div className="about-hero-image" aria-hidden="true" />
       <div className="about-hero-grid" aria-hidden="true" />
       <div className="about-hero-copy">
         <p>About JD Aerial Solutions</p>
