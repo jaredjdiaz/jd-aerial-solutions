@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import PortfolioCarousel from "@/components/PortfolioCarousel";
 import Link from "next/link";
 
-type ServiceIconName = "construction" | "roof" | "mapping" | "model" | "site" | "commercial" | "land";
+type ServiceIconName = "construction" | "roof" | "mapping" | "model" | "site" | "commercial" | "land" | "fpv";
 
 const services: { icon: ServiceIconName; title: string; description: string; href?: string }[] = [
   { icon: "construction", title: "Construction Progress", description: "Track progress, keep projects on schedule, and document every phase from start to finish.", href: "/construction-progress" },
@@ -80,7 +80,7 @@ const structuredData = {
   sameAs: ["https://www.facebook.com/people/JD-Aerial-Solutions/61594337489275/"],
   description: "Commercial property documentation, construction progress imagery, aerial roof inspection imagery, and site visuals in Albuquerque, New Mexico.",
   areaServed: { "@type": "City", name: "Albuquerque", address: { "@type": "PostalAddress", addressRegion: "NM", addressCountry: "US" } },
-  serviceType: ["Construction progress photography", "Drone roof inspection imagery and visual documentation", "Aerial site overview imagery", "Commercial property documentation", "Aerial 3D models"],
+  serviceType: ["Construction progress photography", "Drone roof inspection imagery and visual documentation", "Aerial site overview imagery", "Commercial property documentation", "Aerial 3D models", "FPV drone flythrough videos"],
 };
 
 function ServiceIcon({ icon }: { icon: ServiceIconName }) {
@@ -91,6 +91,7 @@ function ServiceIcon({ icon }: { icon: ServiceIconName }) {
   if (icon === "model") return <svg {...shared}><path d="m24 5 15 8.5v21L24 43 9 34.5v-21Z" /><path d="m9 13.5 15 9 15-9M24 22.5V43" /><path d="m18 8.5 15 8.5" /></svg>;
   if (icon === "site") return <svg {...shared}><rect x="6" y="12" width="36" height="27" rx="3" /><path d="M14 12 17 8h14l3 4" /><circle cx="31" cy="25" r="5" /><path d="m9 35 9-9 6 6 4-4 11 7" /></svg>;
   if (icon === "commercial") return <svg {...shared}><path d="M10 40V12h18v28" /><path d="M28 40V20h10v20" /><path d="M5 40h38" /><path d="M15 18h3m-3 6h3m-3 6h3m18-4h3m-3 6h3" /><path d="M32 12V7h6v13" /></svg>;
+  if (icon === "fpv") return <svg {...shared}><rect x="6" y="12" width="36" height="25" rx="3" /><path d="m20 19 11 6-11 6Z" /><path d="M12 7h24M16 42h16" /></svg>;
   return <svg {...shared}><path d="M6 36c7-8 12 5 20-4s11 4 16-3" /><path d="M6 42c9-7 14 4 22-3s9 3 14-2" /><path d="M13 27c5-5 8 3 13-3s7 2 11-2" /><path d="M24 6c-4 0-7 3-7 7 0 6 7 12 7 12s7-6 7-12c0-4-3-7-7-7Z" /><circle cx="24" cy="13" r="2" /></svg>;
 }
 
@@ -121,7 +122,7 @@ export default function Home() {
     <Navbar />
     <Hero />
     <section className="credentials" data-reveal><div><span className="credential-icon"><CredentialIcon icon="certified" /></span><span>FAA Part 107<br />Certified</span></div><div><span className="credential-icon"><CredentialIcon icon="local" /></span><span>Albuquerque,<br />New Mexico</span></div><div><span className="credential-icon"><CredentialIcon icon="safety" /></span><span>Safety<br />Focused</span></div><div><span className="credential-icon"><CredentialIcon icon="deliverables" /></span><span>Clear Project<br />Deliverables</span></div></section>
-    <section id="services" className="content-section"><header className="section-heading" data-reveal><p>What we do</p><h2>Services</h2></header><div className="service-grid">{services.map(({ icon, title, description, href }) => <article key={title} data-reveal><span className="service-icon"><ServiceIcon icon={icon} /></span><h3>{title}</h3><p>{description}</p><Link className="service-card-link" href={href ?? "#contact"}>{href ? "Learn more" : "Ask about this"}<span aria-hidden="true">→</span></Link></article>)}</div><aside className="capability-note" data-reveal><span className="capability-icon"><ServiceIcon icon="mapping" /></span><div><p>Expanding capability</p><h3>Aerial Mapping</h3><span>Accurate mapping requires a specialized capture and accuracy workflow. Contact us to discuss your project and current availability.</span></div><a href="#contact">Ask About Mapping</a></aside></section>
+    <section id="services" className="content-section"><header className="section-heading" data-reveal><p>What we do</p><h2>Services</h2></header><div className="service-grid">{services.map(({ icon, title, description, href }) => <article key={title} data-reveal><span className="service-icon"><ServiceIcon icon={icon} /></span><h3>{title}</h3><p>{description}</p><Link className="service-card-link" href={href ?? "#contact"}>{href ? "Learn more" : "Ask about this"}<span aria-hidden="true">→</span></Link></article>)}</div><article className="fpv-feature" data-reveal><span className="fpv-feature-icon"><ServiceIcon icon="fpv" /></span><div><p>Featured service</p><h3>FPV Flythroughs</h3><span>Immersive indoor and outdoor video for properties, music venues, commercial spaces, construction sites, and select events.</span></div><Link href="/fpv-flythroughs">Learn More</Link></article><aside className="mapping-consultation" data-reveal><span className="mapping-consultation-icon"><ServiceIcon icon="mapping" /></span><p><strong>Aerial Mapping</strong> is available by consultation for projects that fit the required capture and accuracy workflow.</p><a href="#contact">Ask About Mapping</a></aside></section>
     <section className="content-section industries-section"><header className="section-heading" data-reveal><p>Who we support</p><h2>Industries We Serve</h2></header><p className="industries-intro" data-reveal>Practical aerial documentation for teams that need a clearer view of a property, project, or site.</p><div className="industry-grid" data-reveal><span>Construction</span><span>Property Management</span><span>Commercial Real Estate</span><span>Development</span><span>Engineering Teams</span><span>Building Owners</span></div></section>
     <section id="portfolio" className="portfolio content-section"><header className="section-heading"><p>Selected flights</p><h2>Recent Work</h2></header><PortfolioCarousel items={work} /><a className="portfolio-button" href="#contact">Ask About Your Project</a></section>
     <section id="about" className="about-band"><div><p>Why work with JD Aerial Solutions?</p><h2>Precision from above.<br />Results you can build on.</h2></div><div className="reasons"><span><i className="reason-icon"><ReasonIcon icon="local" /></i><b>Local &amp;<br />Reliable</b></span><span><i className="reason-icon"><ReasonIcon icon="fast" /></i><b>Fast<br />Turnaround</b></span><span><i className="reason-icon"><ReasonIcon icon="accurate" /></i><b>Clear Aerial<br />Visuals</b></span><span><i className="reason-icon"><ReasonIcon icon="reports" /></i><b>Clear<br />Deliverables</b></span><span><i className="reason-icon"><ReasonIcon icon="safe" /></i><b>Safety<br />Focused</b></span></div></section>

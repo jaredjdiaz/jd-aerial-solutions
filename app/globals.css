@@ -292,3 +292,36 @@ h1,h2,h3,.hero-copy>p:first-child { font-family:"Montserrat",Arial,Helvetica,san
   .footer-meta { width:100%; display:grid; grid-template-columns:max-content 30px max-content; align-items:center; justify-content:center; column-gap:16px; row-gap:12px; }
   .footer-meta > span { grid-column:1 / -1; }
 }
+
+/* About introduction without a portrait. */
+.about-intro { grid-template-columns:minmax(220px,.75fr) minmax(0,1.4fr); }
+.about-intro-copy { max-width:720px; }
+@media(max-width:900px) { .about-intro { grid-template-columns:minmax(190px,.75fr) minmax(0,1.2fr); }.about-intro-copy { grid-row:auto; } }
+@media(max-width:750px) { .about-intro { grid-template-columns:1fr; } }
+
+/* Featured FPV service and secondary mapping availability. */
+.fpv-feature { max-width:1440px; min-height:178px; margin:18px auto 0; display:grid; grid-template-columns:76px minmax(0,1fr) auto; align-items:center; gap:24px; padding:28px 30px; color:#fff; background:linear-gradient(110deg,#0b315b 0%,#07182d 68%,#061220 100%); border-left:4px solid #5fa2ed; box-shadow:0 14px 28px rgba(8,31,58,.14); }
+.fpv-feature-icon { display:grid; width:70px; height:70px; place-items:center; border:1px solid rgba(157,204,255,.45); background:rgba(157,204,255,.09); color:#9dccff; }
+.fpv-feature-icon svg { width:40px; height:40px; }
+.fpv-feature p { margin:0 0 6px; color:#9dccff; font-family:"Montserrat",Arial,sans-serif; font-size:10px; font-weight:800; letter-spacing:.14em; text-transform:uppercase; }
+.fpv-feature h3 { margin:0 0 8px; font-family:"Montserrat",Arial,sans-serif; font-size:clamp(22px,2.3vw,34px); letter-spacing:-.04em; }
+.fpv-feature div > span { display:block; max-width:760px; color:#d7e3ef; font-size:14px; font-weight:500; line-height:1.55; }
+.fpv-feature > a { display:inline-flex; min-height:46px; align-items:center; gap:12px; padding:0 17px; border:1px solid #9dccff; border-radius:3px; color:#fff; font-family:"Montserrat",Arial,sans-serif; font-size:10px; font-weight:800; letter-spacing:.035em; text-transform:uppercase; white-space:nowrap; transition:transform .2s ease,background .2s ease,color .2s ease; }
+.fpv-feature > a::after { content:"\2192"; font-size:16px; }
+.fpv-feature > a:hover { color:var(--navy); background:#fff; transform:translateY(-2px); }
+.mapping-consultation { max-width:1440px; margin:12px auto 0; display:flex; align-items:center; gap:13px; padding:14px 18px; border:1px solid #d8e1e9; background:#fff; color:#526172; font-size:12px; }
+.mapping-consultation-icon { display:grid; width:36px; height:36px; flex:0 0 36px; place-items:center; color:var(--blue); background:#edf5fd; }
+.mapping-consultation-icon svg { width:22px; height:22px; }
+.mapping-consultation p { flex:1; margin:0; line-height:1.5; }
+.mapping-consultation strong { color:var(--navy); }
+.mapping-consultation a { color:var(--blue); font-family:"Montserrat",Arial,sans-serif; font-size:10px; font-weight:800; text-transform:uppercase; white-space:nowrap; }
+.fpv-feature > a:focus-visible,.mapping-consultation a:focus-visible { outline:3px solid #9dccff; outline-offset:3px; }
+@media(max-width:650px) {
+  .fpv-feature { grid-template-columns:54px 1fr; gap:16px; padding:23px 18px; }
+  .fpv-feature-icon { width:52px; height:52px; }
+  .fpv-feature-icon svg { width:31px; height:31px; }
+  .fpv-feature > a { grid-column:1 / -1; justify-content:center; }
+  .mapping-consultation { align-items:flex-start; flex-wrap:wrap; }
+  .mapping-consultation p { min-width:calc(100% - 52px); }
+  .mapping-consultation a { margin-left:49px; }
+}

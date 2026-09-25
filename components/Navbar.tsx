@@ -26,6 +26,7 @@ const serviceLinks = [
   ["Site Overview Imagery", "/site-overview-imagery"],
   ["Commercial Properties", "/commercial-properties"],
   ["Vacant Land & Development", "/vacant-land-development"],
+  ["FPV Flythroughs", "/fpv-flythroughs"],
 ];
 
 export default function Navbar() {
